@@ -24,8 +24,24 @@ function showSlides(n) {
   }
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
-  setTimeout("showSlides(slideIndex)",1000)
+
 }
+var myIndex = 0;
+carouse();
+
+function carouse() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carouse, 2000); // Change image every 2 seconds
+}
+
+
 
 let bag=[]
 var url1="https://636bb737ad62451f9fb9caae.mockapi.io/digitals";
@@ -35,8 +51,8 @@ let res= await fetch(url1);
 let out=await res.json();
 bag=out;
 console.log(out)
-let i=0;
-display(out,i)
+
+display(out)
 }
 catch(err){
 alert(err) 
@@ -44,9 +60,9 @@ alert(err)
 }
 getData()
 
-function display(arr,i){
-  let k=i+4
-  for(let i=0;i<=k;i++){
+function display(arr){
+  
+  for(let i=0;i<arr.length;i++){
     let div=document.createElement("div");
     
     let img=document.createElement("img");
@@ -71,7 +87,15 @@ function display(arr,i){
   
 
   }
- 
+ var slider=document.querySelector("#container");
+  var items=slider.querySelector("#container>div")
+function next(){
+  slider.append(items[0])
+}
+function prev(){
+  slider.prepend(items[items.length-1])
+
+}
 let bag1=[]
 var url="https://636bb737ad62451f9fb9caae.mockapi.io/tv";
 async function getDataa(){
@@ -90,8 +114,8 @@ alert(err)
 getDataa()
 
 function display1(arr,i){
-  let k=i+4
-  for(let i=0;i<=k;i++){
+  
+  for(let i=0;i<arr.length;i++){
     let div=document.createElement("div");
     
     let img=document.createElement("img");
@@ -121,7 +145,7 @@ function display1(arr,i){
   var slideInde = 1;
   showSlide(slideInde);
   
-  function plusSlides(n) {
+  function plusSlide(n) {
     showSlide(slideInde += n);
    
   }
@@ -144,9 +168,29 @@ function display1(arr,i){
     }
     slides[slideInde-1].style.display = "block";  
     dots[slideIndex-1].className += " active";
-    setTimeout("showSlide(slideInde)",1000)
-    
+   
   }
+  
+    
+  var myInde = 0;
+  carousel();
+  
+  function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlide");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";  
+    }
+    myInde++;
+    if (myInde > x.length) {myInde = 1}    
+    x[myInde-1].style.display = "block";  
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+  }
+
+    
+    
+    
+
   
   let bag2=[]
 var url2="https://636bb737ad62451f9fb9caae.mockapi.io/new";
@@ -166,8 +210,8 @@ alert(err)
 getaData()
 
 function display2(arr,i){
-  let k=i+4
-  for(let i=0;i<=k;i++){
+  
+  for(let i=0;i<arr.length;i++){
     let div=document.createElement("div");
     
     let img=document.createElement("img");
