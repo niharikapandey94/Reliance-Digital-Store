@@ -2,13 +2,13 @@
 #top{
     display: flex;
 height: 90px;
-background-color:rgba(255, 0, 0, 0.836);
+background-color:red;
 width:100%;
 text-decoration: none;
 
 }
 #logo{
-  width:95% ;
+  width:51% ;
 
 }
 #top>div:nth-child(1){
@@ -59,7 +59,7 @@ a{
 width:120% ;
 height: 30px; 
 border-radius:  15px; ;
-
+border-color:transparent;
 }
 #mob{
     display: flex;
@@ -73,17 +73,17 @@ border-radius:  15px; ;
 
 nav{
   position:static;
-  
+  z-index: 99;
   width: 100%;
   
   background: blue;
 }
 nav .wrapper{
   position: relative;
-  max-width: 90%;
-  
+  max-width: 87%;
+  padding: 0px 30px;
   height: 70px;
- 
+  line-height: 70px;
   margin: auto;
   display: flex;
   align-items: center;
@@ -105,6 +105,16 @@ nav .wrapper{
   transition: all 0.3s ease;
  
 }
+.nav-links .drop-menu{
+  position: absolute;
+  background: #242526;
+  width: 180px;
+  line-height: 45px;
+  top: 85px;
+  opacity: 0;
+  visibility: hidden;
+  box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+}
 .nav-links li a:hover{
   background: red;
 }
@@ -115,11 +125,24 @@ nav .wrapper{
 
 .nav-links li:hover .mega-box{
   transition: all 0.3s ease;
-  top: 70px;
+  top: 60px;
   opacity: 1;
   visibility: visible;
 }
-
+.nav-links li:hover .drop-menu,
+.nav-links li:hover .mega-box{
+  transition: all 0.3s ease;
+  top: 60px;
+  opacity: 1;
+  visibility: visible;
+}
+.drop-menu li a{
+  width: 100%;
+  display: block;
+  padding: 0 0 0 15px;
+  font-weight: 400;
+  border-radius: 0px;
+}
 .mega-box{
   position: absolute;
   left: 0;
@@ -259,7 +282,7 @@ nav .wrapper{
   .prev, .next,.text {font-size: 11px}
 } */
 #cont {
-  max-width: 100%;
+  max-width: 95.7%;
   position:relative;
   
   
@@ -275,7 +298,7 @@ nav .wrapper{
 }
 
 #container>div {
- width:25%;
+ width:80%;
 }
 #container>div h1{
   font-size: 20px;
@@ -306,6 +329,11 @@ nav .wrapper{
   display: flex;
   height: 70px;
   align-items: center;
+}
+#head{
+  background-color: lightgreen;
+border-radius: 8px;
+margin-top:3% ;
 }
 .nex,.pre{
   cursor: pointer;
@@ -343,19 +371,19 @@ left: 96%;
 
 
 #contt{
-  max-width: 100%;
+  max-width: 95.7%;
   position:relative;
-  margin:auto ;
-  display: flex;
-
 }
 
 #tv{
-  /* position:static; */
-  overflow: hidden;
-  height: auto;
-  display: flex;
   
+  position: relative;
+ overflow: hidden;
+ height: auto;
+ display: flex;
+ }
+ #tv>div {
+  width:80%
  }
 
 #tv>div h1{
@@ -370,13 +398,23 @@ left: 96%;
 #tv>div p{
   font-size: smaller;
   color:grey;
-  font-size: 20px;
+  font-size: 15px;
   margin-top: 2px;
-  margin-bottom: 2px;
+
 
 
 }
 
+#tv>div img{
+  width: 100%;
+}
+#ctv{
+  background-color: lightgreen;
+border-radius: 8px;
+margin-top:3% ;
+margin-bottom:5% ;
+ padding: 1%;
+}
 
 
   #dis1{
@@ -389,8 +427,9 @@ left: 96%;
     grid-template-columns:repeat(4,1fr) ;
   }
   #las{
-    max-width: 100%;
+    max-width:91.5%;
     position:relative;
+    margin-left:3% ;
    
   
   }
@@ -456,4 +495,7 @@ left: 96%;
   text-align: center;
   color:white;
   margin-top:10px; 
+}
+s{
+  color:red ;
 }

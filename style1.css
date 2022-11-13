@@ -4,40 +4,45 @@
     height: 50px;
     width: 100%;
  }
+ a{
+  text-decoration: none;
+  color: white;
+}
  #top{
      display: flex;
- height: 50px;
- background-color:rgba(255, 0, 0, 0.836);
+ height: 90px;
+ background-color:red;
  width:100%;
  
  }
  #top1>div{
     margin-left: 2.5%;
     color: white;
+    
  }
  #top>div:nth-child(1){
      margin-top: 10px;
  width:50%;
- border: 1px solid black;
+ 
  }
  #top>div:nth-child(2){
      margin-top: 5px;
      width:50% ;
-     border: 1px solid black;
+     
      margin-left: 30px;
      
  }
  #top>div:nth-child(3){
-    margin-top: 5px;
+    margin-top: 30px;
 width:5%;
-border: 1px solid black;
+font-size: larger;
 margin-left:20% ;
 color: white;
 }
 #top>div:nth-child(4){
-    margin-top: 15px;
+    margin-top: 50px;
 width:5%;
-border: 1px solid black;
+font-size: larger;
 margin-left:0% ;
 color: white;
 
@@ -64,17 +69,194 @@ color: white;
      color: white;
      font-size: larger;
      gap:5px;
-     margin-top: 45px;
+     margin-top: 0px;
  
  }
  
- 
+ #logo{
+  width:14.4%;
+ }
  .search{
+  margin-top:20px ;
  width:100% ;
  height: 30px; 
  border-radius:  15px; ;
- 
+ border-color: transparent;
  }
+ nav{
+  position:static;
+  z-index: 99;
+  width: 100%;
+  
+  background: blue;
+}
+nav .wrapper{
+  position: relative;
+  max-width: 87.1%;
+  padding: 0px 30px;
+  height: 70px;
+  line-height: 70px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.wrapper .nav-links{
+  display: inline-flex;
+}
+.nav-links li{
+  list-style: none;
+}
+.nav-links li a{
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 500;
+  padding: 9px 15px;
+  transition: all 0.3s ease;
+ 
+}
+.nav-links li a:hover{
+  background: red;
+}
+.nav-links .mobile-item{
+  display: none;
+}
+
+
+.nav-links li:hover .mega-box{
+  transition: all 0.3s ease;
+  top: 70px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.mega-box{
+  position: absolute;
+  left: 0;
+  width: 100%;
+  padding: 0 30px;
+  top: 85px;
+  opacity: 0;
+  visibility: hidden;
+}
+.mega-box .content{
+  background: blue;
+  padding: 25px 20px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+}
+ .mega-box .content .row{
+  width: calc(25% - 50px);
+  line-height: 45px; 
+} 
+.content .row img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content .row .mega-links{
+  margin-left: -40px;
+  border-left: 1px solid rgba(255,255,255,0.09);
+}
+.row .mega-links li{
+  padding: 0 20px;
+}
+.row .mega-links li a{
+  padding: 0px;
+  padding: 0 20px;
+  color: #d9d9d9;
+  font-size: 19px;
+  display: block;
+}
+.row .mega-links li a:hover{
+  color: #f2f2f2;
+}
+
+
+
+
+#d{
+  width:100% ;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin:auto ;
+}
+
+
+/* Next & previous buttons */
+.prev, .next {
+  /* cursor: pointer; */
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  
+  color:red;
+  font-weight: bold;
+  font-size: 18px;
+  /* transition: 0.6s ease; */
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+
+
  #mob{
      display: flex;
      background-color: blue;
@@ -85,90 +267,9 @@ color: white;
  }
  
    
-   #menu{
-     width: auto;
-   }
-   #menu > ul{
-     background:darkblue;
-     width: auto;
-   }
-   #menu ul
-   {
-     list-style:none;
-     position:relative;
-     float:left;
-     margin:0;
-     padding:0;
-   }
- 
-   #menu ul a
-   {
-     display:block;
-     color:#fff;
-     text-decoration:none;
-     font-weight:1000px;
-     font-size:15px;
-     line-height:50px;
-     padding:0 33.1px;
-     font-family:Helvetica,Arial,sans-serif;
-   }
- 
-   #menu ul li
-   {
-     position:relative;
-     float:left;
-     margin:0;
-     padding:0
-   }
- 
-   #menu ul li.active
-   {
-     background:red
-   }
- 
-   #menu ul li:hover
-   {
-     /*background:#f6f6f6*/
-     background: red
-   }
- 
-   #menu ul ul
-   {
-     display:none;
-     position:absolute;
-     top:100%;
-     left:0;
-     background:red;
-     padding:0
-   }
- 
-   #menu ul ul li
-   {
-     float:none;
-     width:200px;
-     border-left: 3px solid red;
-   }
-   #menu ul ul li:hover{
-     border-left: 3px solid blue;
-   }
- 
-   #menu ul ul a
-   {
-     line-height:120%;
-     padding:10px 15px
-   }
- 
-   #menu ul ul ul
-   {
-     top:-4px;
-     left:100%
-   }
- 
-   #menu ul li:hover > ul
-   {
-     display:block
-   }
- 
+   
+   
+  
  #re{
     text-align: center;
     margin-top: 6%;
@@ -185,7 +286,7 @@ color: white;
 height: 40px;
 margin-right:5px ;
  }
- #btn{
+ #btnn{
     color: blue;
     width: 300px;
     margin-left:5px ;
@@ -204,7 +305,7 @@ margin-left:20% ;
 color: blue;
 }
 #img1{
-    width: 40% ;
+    width: 30% ;
     margin-top: 4%;
 }
 #box>div{
@@ -237,4 +338,40 @@ color: blue;
     text-align: center;
     color:white;
     margin-top:10px; 
-  }
+  }#btn{
+    margin-left: 700px;
+    padding: .6%;
+    border-radius:25px ;
+    width: 100px;
+    background-color: blue;
+    color: white;
+    border-color:transparent;
+    font-size: medium;
+    margin-bottom: 10px;
+   }
+   #happy{
+     display: flex;
+     height: auto;
+     width: 100%;
+     /* margin-left: 2px ;
+     margin-right:2px ; */
+     background-color: rgba(0, 0, 139, 0.856);
+     color:white;
+     margin-top: 10px;
+   }
+   #happy>div{
+     margin-left: 10%;
+   }
+   #moreh{
+     background-color:darkblue ;
+     height:auto;
+     width: 100%;
+     margin-top: -1.5%;
+     text-align: center;
+     /* position:absolute; */
+   }
+   #moreh>div {
+     text-align: center;
+     color:white;
+     margin-top:10px; 
+   }

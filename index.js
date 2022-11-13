@@ -44,7 +44,7 @@ function carouse() {
 
 
 let bag = []
-var url1 = "https://636bb737ad62451f9fb9caae.mockapi.io/digitals";
+var url1 = "https://636bb737ad62451f9fb9caae.mockapi.io/digit";
 async function getData() {
   try {
     let res = await fetch(url1);
@@ -61,26 +61,27 @@ async function getData() {
 getData()
 let i=0;
 let t=0;
+let n3=0;
 function display(i) {
   document.querySelector("#container").innerHTML=""
+   n3=bag.length;
   for (i; i < bag.length; i++) {
     let div = document.createElement("div");
 
     let img = document.createElement("img");
     img.setAttribute("src", bag[i].img)
     let tit = document.createElement("h1");
-    tit.innerText = bag[i].tiitle
-    let discount = document.createElement("p");
-    discount.innerText = "You Save :" + bag[i].discount
+    tit.innerText = bag[i].tittle
+    
     let cost = document.createElement("p");
-    cost.innerText = "Deal Price :" + bag[i].price;
-    let Mrp = document.createElement("p");
+    cost.innerText = "Deal Price :" + bag[i].Price;
+    let Mrp = document.createElement("s");
     Mrp.innerText = "Mrp :" + bag[i].mrp
-
+    let hr=document.createElement("br")
     let btn = document.createElement("button");
     btn.innerText = "OFFERS AVAILABLE";
-
-    div.append(img, tit, cost, discount, Mrp, btn);
+btn.setAttribute("id","head")
+    div.append(img, tit, cost, Mrp,hr, btn);
     document.querySelector("#container").append(div)
 
   }
@@ -93,7 +94,7 @@ function prev() {
   t++
  console.log(n)
   console.log(j,j+1)
-  if(t==n-5){
+  if(t==n3-5){
     t=0
   }
   display(t)
@@ -102,7 +103,7 @@ function prev() {
 }
 function next() {
 if(t==0){
-    t=n-6
+    t=n3-6
     console.log(j)
     display(j)
     return
@@ -121,8 +122,8 @@ async function getDataa() {
     let out = await res.json();
     bag1 = out;
     console.log(out)
-
-    display1(w)
+let w=0
+    display1(out,w)
   }
   catch (err) {
     alert(err)
@@ -130,14 +131,13 @@ async function getDataa() {
 }
 getDataa()
 
-let j=0
-let w=0
 
-function display1(w) {
+function display1(arr,w) {
+  let k=w+4
   document.querySelector("#tv").innerHTML=""
   
-  n = bag1.length
-  for (w; w < n; w++) {
+  
+  for (w; w <k; w++) {
     let div = document.createElement("div");
 
     let img = document.createElement("img");
@@ -148,13 +148,13 @@ function display1(w) {
     discount.innerText = "You Save :" + bag1[w].discount
     let cost = document.createElement("p");
     cost.innerText = "Deal Price :" + bag1[w].price;
-    let Mrp = document.createElement("p");
+    let Mrp = document.createElement("s");
     Mrp.innerText = "Mrp :" + bag1[w].mrp
-
+      let hr=document.createElement("br")
     let btn = document.createElement("button");
     btn.innerText = "OFFERS AVAILABLE";
-
-    div.append(img, tit, cost, discount, Mrp, btn);
+      btn.setAttribute("id","ctv")
+    div.append(img, tit, cost, discount, Mrp,hr,btn);
     document.querySelector("#tv").append(div)
 
   }
@@ -162,37 +162,12 @@ function display1(w) {
 
 
 }
-function Slide() {
-  j++
-  
-  // console.log(n)
-  console.log(j, j + 1)
-  if (j == n) {
-    j = 0
-  }
- 
-  display1(j)
-
-}
-
-
-function SSlide() {
-  console.log(n)
-  if (j == 0) {
-    j = n-1
-    console.log(j)
-    display1(j)
-    return
-  }
-  j--
-  console.log(j, j + 1)
-  display1(j)
 
 
 
 
 
-}
+
 
 
 var slideInde = 1;
@@ -260,11 +235,13 @@ async function getaData() {
     alert(err)
   }
 }
-let q=0;
-let r=0;
-getaData()
 
+getaData()
+let q=0;
+let n1=0;
+let r=0;
 function display2(q) {
+   n1= bag2.length;
   document.querySelector("#last").innerHTML=""
   for (q; q <bag2.length; q++) {
     let div = document.createElement("div");
@@ -288,7 +265,7 @@ function aSlide() {
   
   // console.log(n)
   console.log(r, r + 1)
-  if (r == n+1) {
+  if (r == n1-5) {
     r = 0
   }
  
@@ -298,9 +275,9 @@ function aSlide() {
 
 
 function bSlide() {
-  console.log(n)
+  console.log(n1)
   if (r == 0) {
-    r = n-1
+    r = n1-6
     console.log(r)
     display2(r)
     return
@@ -310,7 +287,6 @@ function bSlide() {
   display2(r)
 
 
-
-
-
 }
+//  login page js
+
