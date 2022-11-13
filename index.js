@@ -92,8 +92,8 @@ btn.setAttribute("id","head")
 
 function prev() {
   t++
- console.log(n)
-  console.log(j,j+1)
+ 
+  
   if(t==n3-5){
     t=0
   }
@@ -104,12 +104,12 @@ function prev() {
 function next() {
 if(t==0){
     t=n3-6
-    console.log(j)
-    display(j)
+    
+    display(t)
     return
   }
     t--
-  console.log(j,j+1)
+ 
   display(t)
   
 }
