@@ -22,13 +22,13 @@ Dominos Pizza ranks among the world’s top restaurant brands. Delivering Pizza 
 
 ```
 # Pages
-# Home
+## Home
 ## ![Home Section](https://i.ibb.co/RBMjVb6/Home.png)
-# Find Us
+## Find Us
 ## ![Find Us](https://i.ibb.co/SmG6jMv/Find-us.png)
-# Login
+## Login
 ## ![Login](https://i.ibb.co/wJYN5Rt/login.png)
-# SignUp
+## SignUp
 ## ![Sign Up](https://i.ibb.co/cbTnd7G/Signup.png)
 
 
