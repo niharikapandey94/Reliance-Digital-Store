@@ -1,18 +1,15 @@
-# snotty-wash-4238
+# hashtag Digi Store
    ```
-Delicious Pizza(clone of Domino's Pizza)
+Clone of Reliance Digital
    ```
 # About
   ```
-Dominos Pizza ranks among the world’s top restaurant brands. Delivering Pizza in different varieties both online  and offline line mode.
+Its retail outlets offer foods, groceries, apparel, footwear, toys, home improvement products, electronic goods, and farm implements and inputs.
    ```
 # Made by
   ```
-1-Niharika Pandey(Teamlead)
-2-Divyansh Goel
-3-Shubham Kumar
-4-Jayesh Patil
-5-Sagar Rajwar
+1-Niharika Pandey
+
   ```
 # Based on-
   ```
@@ -37,10 +34,10 @@ Dominos Pizza ranks among the world’s top restaurant brands. Delivering Pizza 
   
 # Git hub link
   ```
-"https://github.com/niharikapandey94/snotty-wash-4238"
+https://github.com/niharikapandey94/Reliance-Digital-Clone
      
   ```
 
 # Netlify link
    ```
-https://delicious-pizza.netlify.app/
+https://tangerine-dragon-6b2241.netlify.app/contact
